@@ -11,7 +11,6 @@ import { EventsComponent } from './components/events/events.component';
 import { MarketComponent } from './components/market/market.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BetslipComponent } from './components/betslip/betslip.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -23,7 +22,7 @@ import { SharedModule } from './shared/shared.module';
     EventsComponent,
     MarketComponent,
     BetslipComponent,
-    FooterComponent
+
   ],
   imports: [
     BrowserModule,

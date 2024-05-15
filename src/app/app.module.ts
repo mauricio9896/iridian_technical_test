@@ -6,13 +6,12 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HomeComponent } from './components/home/home.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { SharedModule } from './shared.module';
 import { CardComponent } from './components/card/card.component';
 import { EventsComponent } from './components/events/events.component';
 import { MarketComponent } from './components/market/market.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BetslipComponent } from './components/betslip/betslip.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { SharedModule } from './shared/shared.module';
     CardComponent,
     EventsComponent,
     MarketComponent,
-    BetslipComponent,
-    FooterComponent
+    BetslipComponent
   ],
   imports: [
     BrowserModule,

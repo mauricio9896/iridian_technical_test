@@ -3,5 +3,9 @@
   flex-direction: column;
   height: 100vh;
   background-color: rgb(225, 225, 225);
-  overflow-y: auto;
+}
+
+.page{
+  display: flex;
+  height: 100%;
 }

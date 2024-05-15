@@ -5,15 +5,12 @@
     </mat-drawer>
 
     <div class="col-12">
-      <app-toolbar (buttonClicked)="toggleDrawer()"></app-toolbar>
+      <app-toolbar (buttonClicked)="toggleDrawer()"  ></app-toolbar>
     </div>
-    <div>
+    <div class="page">
       <div class="col-12 p-3">
         <app-events></app-events>
       </div>
-    </div>
-    <div class="col-12 p-0">
-      <app-footer></app-footer>
     </div>
   </mat-drawer-container>
 </div>

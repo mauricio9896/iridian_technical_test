@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{dataEvent.name | titlecase}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    @for (market of dataEvent.markets; track $index) {
+      <app-market [market]="market"></app-market>
+    }
+  </mat-card-content>
+</mat-card>

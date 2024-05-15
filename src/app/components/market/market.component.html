@@ -1,0 +1,13 @@
+<div class="container-fluid mt-3">
+  <span class="mb-1 name-market">{{market.name | titlecase}}</span>
+  <div class="d-flex gap-3 justify-content-between" >
+    @for (selection of market.selections; track $index) {
+      <div class="col-md-3">
+        <button (click)="addBetslip(selection)" class="options" [ngClass]="{'selected': selectedOption(selection.id)}">
+            <div>{{selection.name}}</div>
+            <div>{{selection.price}}</div>
+        </button>
+      </div>
+    }
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container-fluid p-2 page">
+  <h2>Apuestas</h2>
+  @if (selectionsHitory.length == 0 ) {
+  <div>
+    <span class="fs-12"> No ha realizado ninguna apuesta </span>
+  </div>
+  } @for (selected of selectionsHitory; track $index) {
+  <mat-card class="card mb-1">
+    <mat-card-content>
+      <div class="col-12 d-flex justify-content-between">
+        <div>{{ selected.name }}</div>
+        <div>{{ selected.price }}</div>
+        <div>
+          <mat-icon
+            color="primary"
+            (click)="deleteSelected(selected)"
+            style="cursor: pointer"
+            matTooltip="Eliminar apuesta"
+            >close</mat-icon
+          >
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  }
+</div>

@@ -1,0 +1,16 @@
+<div class="container-fluid m-0 p-0">
+  <mat-drawer-container class="home" autosize>
+    <mat-drawer #drawer mode="push">
+      <app-betslip></app-betslip>
+    </mat-drawer>
+
+    <div class="col-12">
+      <app-toolbar (buttonClicked)="toggleDrawer()"  ></app-toolbar>
+    </div>
+    <div class="page">
+      <div class="col-12 p-3">
+        <app-events></app-events>
+      </div>
+    </div>
+  </mat-drawer-container>
+</div>

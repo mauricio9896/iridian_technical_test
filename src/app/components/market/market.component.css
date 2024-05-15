@@ -1,7 +1,8 @@
 
 .name-market{
   font-size: 14px;
-  color: gray;
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .card{

@@ -1,6 +1,6 @@
-<div class="container-fluid mt-3">
+<div class="container-fluid p-3 mb-1" style="border: 1px solid lightgray;">
   <span class="mb-1 name-market">{{market.name | titlecase}}</span>
-  <div class="row gap-3 justify-content-between" >
+  <div class="row mt-1 gap-3 justify-content-between">
     @for (selection of market.selections; track $index) {
       <div class="col-md-3">
         <button (click)="addBetslip(selection)" class="options" [ngClass]="{'selected': selectedOption(selection.id)}">

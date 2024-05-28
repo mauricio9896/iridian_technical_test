@@ -1,4 +1,6 @@
-
+#market{
+  border: 1px solid lightgray;
+}
 .name-market{
   font-size: 14px;
   font-weight: 500;

@@ -24,8 +24,39 @@ export class EventsService {
 
   addSelectionHistory(selection: Selections): void {
     if (this._selectionsHitory.includes(selection)) return;
-    this._selectionsHitory.push(selection);
-    this.saveSelectionHistory();
+    this.getEvents().subscribe((events: Events[]) => {
+      const id_market = this.marketFind(selection.id, events);
+      if ( id_market ){
+        if( this.marketSome(id_market, events)) return
+        this._selectionsHitory.push(selection);
+        this.saveSelectionHistory();
+      }
+    });
+  }
+
+  private marketSome( id: string, events: Events[] ){
+    for (const selection of this._selectionsHitory) {
+      const id_market = this.marketFind(selection.id, events);
+      if (id_market == id) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private marketFind(id: string, events: Events[]): string | null{
+    if (events.length > 0) {
+      for (const event of events) {
+        for (const market of event.markets) {
+          for (const selection of market.selections) {
+            if (selection.id === id) {
+              return market.id
+            }
+          }
+        }
+      }
+    }
+    return null
   }
 
   deleteSelectionHistory(selection: Selections): void {

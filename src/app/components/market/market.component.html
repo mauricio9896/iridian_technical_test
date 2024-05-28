@@ -3,7 +3,7 @@
   <div class="row mt-1 gap-3 justify-content-between">
     @for (selection of market.selections; track $index) {
       <div class="col-md-3">
-        <button (click)="addBetslip(selection)" class="options" [ngClass]="{'selected': selectedOption(selection.id)}">
+        <button (click)="addBetslip(selection )" class="options" [ngClass]="{'selected': selectedOption(selection.id)}">
             <div>{{selection.name}}</div>
             <div>{{selection.price}}</div>
         </button>
